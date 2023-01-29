@@ -8,6 +8,7 @@ function Tarifs ({data}) {
                     <div className="col-md-12 text-center mb-3"><h1><strong>Nos offres</strong></h1></div>
                 </div>
                 
+               
                 {data.map((ev) =>                 
                     <>  
                         {
@@ -20,6 +21,7 @@ function Tarifs ({data}) {
                         }
                     </>
                 )}
+           
             </div>
         </div>
     )
