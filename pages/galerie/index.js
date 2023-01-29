@@ -68,10 +68,10 @@ const CatPage = ({photo, error}) => {
             <div className="row  p-2" key={photo.data.id} >         
               { filtered.map((ev) =>                 
                     <>                      
-                      { ev.attributes.image.data.map((ev2, index) =>
+                      { ev.attributes.images.data.map((ev2) =>
                           <>
-                            <div className="col-lg-3 col-md-4 col-sm-6 pt-4" key={index}>
-                              <Image src={ev2.attributes.formats.thumbnail.url} width={260} height={200} alt={ev2.attributes.name} />
+                            <div className="col-lg-3 col-md-4 col-sm-6 pt-4" key={ev2.attributes.id}>
+                              <Image src={`https://strapi-108375-0.cloudclusters.net${ev2.attributes.formats.medium.url}`} width={260} height={200} alt={ev2.attributes.name} />
                             </div>
                           </>
                         )                          
@@ -89,7 +89,7 @@ export default CatPage;
 export async function getServerSideProps() {
 
   try {
-    const req= await axios.get('http://localhost:1337/api/photos?populate=*');
+    const req= await axios.get('https://strapi-108375-0.cloudclusters.net/api/photos?populate=*');
   
     return { props: {
                 photo :req.data,
