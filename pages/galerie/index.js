@@ -72,7 +72,7 @@ const CatPage = ({photo, error}) => {
                       { ev.attributes.images.data.map((ev2) =>
                           <>
                             <div className="col-lg-3 col-md-4 col-sm-6 pt-4" key={ev2.attributes.id}>
-                              <Image src={`https://${process.env.NEXT_PUBLIC_STRAPI_DOMAIN}${ev2.attributes.formats.medium.url}`} width={260} height={200} alt={ev2.attributes.name} />
+                              <Image src={`https://${process.env.NEXT_PUBLIC_STRAPI_DOMAIN}${ev2.attributes.formats.thumbnail.url}`} width={260} height={200} alt={ev2.attributes.name} />
                             </div>
                           </>
                         )                          
