@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Homepage } from './src/components/home/home-page'
+import Image from 'next/image'
 import React from 'react'
 
 export default function Home() 
@@ -14,7 +14,16 @@ export default function Home()
         
       </Head>
       
-      <Homepage />
+      <div> 
+            <Image
+            className="d-block w-100"
+            src="/images/Charles1.jpg"
+            alt="slide"
+            
+            width={1200}
+            height={720}
+            />
+        </div>
 
     </>
   )
