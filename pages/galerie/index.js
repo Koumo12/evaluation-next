@@ -52,26 +52,26 @@ const CatPage = ({photo, error}) => {
                   
               </div>
               
-              <div className='col-md-2 m-auto mt-4 justify-between'>
+              <div className='col-md-2 m-auto mt-4 justify-between'  key={photo.data._id}  >
                   <select                      
                       name="category"
                       value={query.category}
                       onChange={handleChange}                       
                       className="form-control" 
-                      key={photo.data.id}                       
+                                            
                   >
                     <option value="">Filtre</option>
                     { <CategoryList options={photo.data} /> }
                   </select>                  
               </div>                
             </div>
-            <div className="row  p-2" key={photo.data.id} >         
+            <div className="row  p-2" >         
               { filtered.map((ev) =>                 
                     <>                      
                       { ev.attributes.images.data.map((ev2) =>
                           <>
                             <div className="col-lg-3 col-md-4 col-sm-6 pt-4" key={ev2.attributes.id}>
-                              <Image src={`${process.env.NEXT_PUBLIC_STRAPI_DOMAIN}${ev2.attributes.formats.medium.url}`} width={260} height={200} alt={ev2.attributes.name} />
+                              <Image src={`https://${process.env.NEXT_PUBLIC_STRAPI_DOMAIN}${ev2.attributes.formats.medium.url}`} width={260} height={200} alt={ev2.attributes.name} />
                             </div>
                           </>
                         )                          
@@ -89,7 +89,7 @@ export default CatPage;
 export async function getServerSideProps() {
 
   try {
-      const req= await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_DOMAIN}/api/photos?populate=*` || "http://localhost:1337");
+      const req= await axios.get(`https://${process.env.NEXT_PUBLIC_STRAPI_DOMAIN}/api/photos?populate=*`);
   
     return { props: {
                 photo :req.data,
