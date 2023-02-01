@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import axios from "axios";
+import { getStrapiURL } from "@/data/api";
 
 const CategoryList = ({options}) => {
   return (
@@ -52,13 +53,13 @@ const CatPage = ({photo, error}) => {
                   
               </div>
               
-              <div className='col-md-2 m-auto mt-4 justify-between'  key={photo.data._id}  >
+              <div className='col-md-2 m-auto mt-4 justify-between'    >
                   <select                      
                       name="category"
                       value={query.category}
                       onChange={handleChange}                       
                       className="form-control" 
-                                            
+                         key={photo.id}                   
                   >
                     <option value="">Filtre</option>
                     { <CategoryList options={photo.data} /> }
