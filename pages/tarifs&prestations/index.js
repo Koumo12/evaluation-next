@@ -1,8 +1,31 @@
-import Tarifs from '../src/components/events/tarifs';
+
 import React from 'react';
 
 const TarifsPrestation = ({data}) => {
-    return (<Tarifs data={data} />);
+    return (
+        <div className="">           
+            <div className="container p-5">
+                <div className="row">
+                    <div className="col-md-12 text-center mb-3"><h1><strong>Nos offres</strong></h1></div>
+                </div>
+                
+            
+                {data.map((ev) =>                 
+                    <>  
+                        {
+                            <div className="row p-4 border bordure" key={ev.id}>
+                                <div className="col-md-2 mb-4 " ></div>
+                                <div className="col-md-3 mb-4 " ><strong>{ev.title}</strong></div>
+                                <div className="col-md-2 mb-4 " ><strong>{ev.prix}</strong></div>
+                                <div className="col-md-5 mb-4 ">{ev.description}</div>
+                            </div>
+                        }
+                    </>
+                )}
+        
+            </div>
+        </div>
+    );
 }
 
 
