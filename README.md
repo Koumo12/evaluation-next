@@ -3,7 +3,7 @@
 Charle cantin Site is a photographe Website creating with Next Js and Strapi
 
 ![screenshot image](/screenshot.png)
-![screenshot image](/screenshot.png2)
+![screenshot image](/screenshot2.png)
 
 ## Features
 
