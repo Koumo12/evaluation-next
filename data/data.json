@@ -1,9 +1,11 @@
 { 
-    "tarifsPrestation": [{"id":"1","title": "Juste moi", "prix": "130 euros", "description": "Séance pour une personne, en extérieur ou en studio"},
-    {"id":"2","title": "Pour deux", "prix": "195 euros", "description": "Pour deux personnes, en extérieur ou en studio"},
-    {"id":"3","title": "famille", "prix": "220 euros", "description": "Pour la famille ou les amis jusqu’à 4 personnes, en extérieur ou en studio 30 euros en supplément par personne au-delà de 4 (hormis enfant jusqu’à 2 ans)"},
-    {"id":"4","title": "Il était une fois", "prix": "160 euros", "description": "Photo de grossesse (À votre domicile, en extérieur ou en studio)"},
-    {"id":"5","title": "Mon bébé", "prix": "100 euros", "description": "Photo d’enfant jusqu’à 3 ans (photo à domicile)"},
-    {"id":"6","title": "J’immortalise l’événement", "prix": "sur mesure", "description": "Prestation de mariage ou baptême sur devis"}]
+    "tarifsPrestation": [
+        {"id":"1","title": "Juste moi", "prix": "130 €", "description": "Séance pour une personne, en extérieur ou en studio"},
+        {"id":"2","title": "Pour deux", "prix": "195 €", "description": "Pour deux personnes, en extérieur ou en studio"},
+        {"id":"3","title": "Famille", "prix": "220 €", "description": "Pour la famille ou les amis jusqu’à 4 personnes, en extérieur ou en studio 30 € en supplément par personne au-delà de 4 (hormis enfant jusqu’à 2 ans)"},
+        {"id":"4","title": "Il était une fois", "prix": "160 €", "description": "Photo de grossesse (À votre domicile, en extérieur ou en studio)"},
+        {"id":"5","title": "Mon bébé", "prix": "100 €", "description": "Photo d’enfant jusqu’à 3 ans (photo à domicile)"},
+        {"id":"6","title": "J’immortalise l’événement", "prix": "sur mesure", "description": "Prestation de mariage ou baptême sur devis"}
+    ]
     
 }
